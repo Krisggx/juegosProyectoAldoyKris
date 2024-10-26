@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizar Nombres</title>
+    <link rel="stylesheet" href="CSS/nombreSave.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personaliza los Nombres</h1>
+        <div class="name-container">
+            <label for="player1-name">Nombre Jugador 1:</label>
+            <input type="text" id="player1-name" placeholder="Jugador 1" />
+            <label for="player2-name">Nombre Jugador 2:</label>
+            <input type="text" id="player2-name" placeholder="Jugador 2" />
+            <button id="save-names-btn" onclick="saveNames()">Guardar Nombres</button>
+        </div>
+        <button onclick="window.location.href='portada.html'" class="return-btn">Regresar al Menú Principal</button>
+    </div>
+
+    <script>
+        function saveNames() {
+            let player1 = document.getElementById('player1-name').value || 'Jugador 1';
+            let player2 = document.getElementById('player2-name').value || 'Jugador 2';
+            localStorage.setItem('player1', player1);
+            localStorage.setItem('player2', player2);
+            // Redirigir a la página del juego
+            window.location.href = 'MemoriaD.html';
+        }
+    </script>
+</body>
+</html>
+

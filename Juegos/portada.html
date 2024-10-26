@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/portada.css">
+    <title>Juegos</title>
+</head>
+
+<body>
+    <marquee direction="rigth"><b>BIENVENIDOS</b></marquee>
+    
+    <div class="container">
+        <div class="game-option">
+            <button class="btn" onclick="toggleDropdown('totito')">Totito</button>
+            <div id="totito" class="dropdown-content">
+                <a href="TotitoN.html">Normal</a>
+                <a href="TotitoD.html">Difícil</a>
+            </div>
+        </div>
+
+        <div class="game-option">
+            <button class="btn" onclick="toggleDropdown('memoria')">Memoria</button>
+            <div id="memoria" class="dropdown-content">
+                <a href="nombreMemoria.html">Normal</a>
+                <a href="nombreMemoriaD.html">Difícil</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            dropdown.classList.toggle('show');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.btn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Totito</title>
+    <link rel="stylesheet" href="CSS/TotitoN.css">
+</head>
+<body>
+    <div class="turno-contenedor">
+        <h3>Turno de:</h3>
+        <div class="turno-caja alinear">X</div>
+        <div class="turno-caja alinear">O</div>
+        <div class="fondo"></div>
+    </div>
+    <div class="cuadricula-principal">
+        <div class="casilla alinear">0</div>
+        <div class="casilla alinear">1</div>
+        <div class="casilla alinear">2</div>
+        <div class="casilla alinear">3</div>
+        <div class="casilla alinear">4</div>
+        <div class="casilla alinear">5</div>
+        <div class="casilla alinear">6</div>
+        <div class="casilla alinear">7</div>
+        <div class="casilla alinear">8</div>
+    </div>
+    <h2 id="resultado"></h2>
+    <button id="jugar-nuevamente">Jugar Nuevamente</button>
+
+    <!-- Tabla de resultados con más espacio y bordes -->
+    <table id="tabla-marcador" style="margin: 20px auto; border-collapse: collapse; width: 300px; text-align: center;">
+        <thead>
+            <tr>
+                <th style="border: 2px solid white; padding: 10px;">X Ganados</th>
+                <th style="border: 2px solid white; padding: 10px;">O Ganados</th>
+                <th style="border: 2px solid white; padding: 10px;">Empates</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="victorias-x" style="border: 2px solid white; padding: 10px;">0</td>
+                <td id="victorias-o" style="border: 2px solid white; padding: 10px;">0</td>
+                <td id="empates" style="border: 2px solid white; padding: 10px;">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="btn-regresar"><a href="portada.html">REGRESAR</a></button>
+
+    <script src="Js/TotitoN.js"></script>
+</body>
+</html>

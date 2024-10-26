@@ -1,0 +1,160 @@
+*{
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+.alinear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: #252A34;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.turno-contenedor{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turno-contenedor h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.turno-contenedor .turno-caja{
+    border: 3px solid white;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.turno-contenedor .turno-caja:nth-child(even){
+    border-right: none;
+}
+
+.fondo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #FF2E63;
+    z-index: -1;
+}
+
+.cuadricula-principal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 30px auto;
+    border: 2px solid white;
+}
+
+.casilla{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid white;
+}
+
+.casilla:hover{
+    background-color: #FF2E63;
+    box-shadow: 
+        0 0 15px #900202,
+        0 0 15px #8f0202,
+        0 0 15px #940404,
+        0 0 15px #950303;
+}
+
+#jugar-nuevamente{
+    background-color: #FF2E63;
+    box-shadow: 
+        0 0 15px #900202,
+        0 0 15px #8f0202,
+        0 0 15px #940404,
+        0 0 15px #950303;
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#jugar-nuevamente:hover{
+    padding: 10px 40px;
+    background-color: #08D9D6;
+    box-shadow: 
+        0 0 15px #080185,
+        0 0 15px #0b01d2,
+        0 0 15px #0430c1,
+        0 0 15px #013751;
+    color: #000;
+}
+
+#btn-regresar {
+    background-color: #FF2E63;   /* Color de fondo */
+    color: white;                /* Color del texto */
+    border: none;                /* Sin borde */
+    border-radius: 12px;         /* Bordes redondeados */
+    padding: 10px 25px;          /* Espaciado interno del botón */
+    font-size: 1.2rem;           /* Tamaño de la fuente */
+    font-family: sans-serif;     /* Fuente */
+    font-weight: bold;           /* Texto en negrita */
+    cursor: pointer;             /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+#btn-regresar:hover {
+    background-color: #08D9D6;   /* Cambia el color de fondo al pasar el mouse */
+    color: black;                /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05);      /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+#btn-regresar:active {
+    transform: scale(0.98);      /* Disminuye el tamaño cuando se hace clic */
+}
+
+#btn-regresar {
+    background-color: #0e8a00;   /* Color de fondo */
+    color: white;                /* Color del texto */
+    border: none;                /* Sin borde */
+    border-radius: 12px;         /* Bordes redondeados */
+    padding: 10px 25px;          /* Espaciado interno del botón */
+    font-size: 1.2rem;           /* Tamaño de la fuente */
+    font-family: sans-serif;     /* Fuente */
+    font-weight: bold;           /* Texto en negrita */
+    cursor: pointer;             /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    box-shadow: 
+        0 0 15px #003c03,
+        0 0 15px #044207,
+        0 0 15px #093b0c,
+        0 0 15px #0b4b0e;
+}
+
+#btn-regresar:hover {
+    background-color: #003c03;   /* Cambia el color de fondo al pasar el mouse */
+    color: black;                /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05);      /* Aumenta ligeramente el tamaño al pasar el mouse */
+}
+
+#btn-regresar:active {
+    transform: scale(0.98);      /* Disminuye el tamaño cuando se hace clic */
+}
